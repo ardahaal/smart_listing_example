@@ -1,0 +1,15 @@
+- unless smart_listing.empty?
+  %table.table.table-striped
+    %thead
+      %th.col-md-3= smart_listing.sortable "Name", :name
+      %th.col-md-3= smart_listing.sortable "Surname", :surname
+      %th.col-md-4= smart_listing.sortable "Email", :email
+    %tbody
+      - smart_listing.collection.each do |o|
+        %tr.editable{data: {id: o.id}}
+          = smart_listing.render object: o, partial: "users/user", locals: {object: o}
+      = smart_listing.item_new colspan: 6, link: new_user_path
+  = smart_listing.paginate
+  = smart_listing.pagination_per_page_links
+- else
+  %p.warning No users
