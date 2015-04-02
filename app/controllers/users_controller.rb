@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def index
     users_scope = User.all
     users_scope = users_scope.like(params[:filter]) if params[:filter]
-    @users = smart_listing_create :users, users_scope, partial: "users/list", page_sizes: [5, 7, 48]
+    @users = smart_listing_create :users, users_scope, partial: "users/list", page_sizes: [5, 7, 13, 26]
   end
 
   def new
