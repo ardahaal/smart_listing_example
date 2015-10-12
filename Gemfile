@@ -5,6 +5,7 @@ gem 'faker'
 #gem 'smart_listing', :git => 'https://github.com/Sology/smart_listing.git'
 gem 'smart_listing', '~> 1.1.2'
 gem 'twitter-bootstrap-rails'
+gem "font-awesome-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'pg'

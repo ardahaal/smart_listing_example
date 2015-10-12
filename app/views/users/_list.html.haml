@@ -1,9 +1,11 @@
 - unless smart_listing.empty?
   %table.table.table-striped
     %thead
-      %th.col-md-3= smart_listing.sortable "Name", :name
-      %th.col-md-3= smart_listing.sortable "Surname", :surname
-      %th.col-md-4= smart_listing.sortable "Email", :email
+      %th= smart_listing.sortable "Name", :name
+      %th= smart_listing.sortable "Surname", :surname
+      %th= smart_listing.sortable "Email", :email
+      %th= smart_listing.sortable "City", :city
+      %th= smart_listing.sortable "Birthday", :birthday
     %tbody
       - smart_listing.collection.each do |o|
         %tr.editable{data: {id: o.id}}

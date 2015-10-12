@@ -1,0 +1,33 @@
+<%= form_for(@bio) do |f| %>
+  <% if @bio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bio.errors.count, "error") %> prohibited this bio from being saved:</h2>
+
+      <ul>
+      <% @bio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :birthday %><br>
+    <%= f.datetime_select :birthday %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
