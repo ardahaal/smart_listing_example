@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'haml'
 gem 'faker'
-gem 'smart_listing'
+gem 'smart_listing', git: 'https://github.com/Sology/smart_listing'
 # gem 'smart_listing', path: '../../smart_listing'
 gem 'twitter-bootstrap-rails'
 gem "font-awesome-rails"
