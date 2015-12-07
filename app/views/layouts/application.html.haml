@@ -1,0 +1,14 @@
+%html
+%head
+  %title Example
+  %meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
+  <link href='http://fonts.googleapis.com/css?family=Gudea:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+%body{"data-smart-listing-config" => (SmartListing.config(smart_listing_config_profile).to_json if defined?(smart_listing_config_profile))}
+
+  .container
+    = yield

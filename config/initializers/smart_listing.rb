@@ -18,7 +18,7 @@ SmartListing.configure do |config|
   config.constants :classes, {
     #:main                  => "smart-listing",
     #:editable              => "editable",
-    #:content               => "content",
+    :content               => "new-content-class",
     #:loading               => "loading",
     #:status                => "smart-listing-status",
     #:item_actions          => "actions",
